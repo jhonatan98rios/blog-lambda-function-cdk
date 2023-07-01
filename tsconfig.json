@@ -20,12 +20,21 @@
     "inlineSources": true,
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
+    "skipLibCheck": true,
     "typeRoots": [
       "./node_modules/@types"
-    ]
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "opt/nodejs/infra/PostRepository": ["lambda/posts/layers/postsLayer/nodejs/infra/PostRepository"],
+      "opt/nodejs/infra/connection": ["lambda/posts/layers/postsLayer/nodejs/infra/connection"],
+      "opt/nodejs/infra/dotenv": ["lambda/posts/layers/postsLayer/nodejs/infra/dotenv"],
+      "opt/nodejs/domain/Post": ["lambda/posts/layers/postsLayer/nodejs/domain/models/Post"],
+      "opt/nodejs/domain/AbstractPostRepository": ["lambda/posts/layers/postsLayer/nodejs/domain/repositories/AbstractPostRepository"],
+    }
   },
   "exclude": [
     "node_modules",
     "cdk.out"
-  ]
+  ],
 }
